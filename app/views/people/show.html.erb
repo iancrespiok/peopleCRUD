@@ -1,0 +1,18 @@
+<h1> <%=@person.name%> <%=@person.surname%> </h1>
+<div>
+  <ul>
+    <li>
+      <strong>Edad:</strong> <%= @person.edad %>
+    </li>
+    <li>
+      <strong>Fecha de nacimiento:</strong> <%= @person.birthday %>
+    </li>
+    <li>
+      <strong>DNI:</strong> <%= @person.document %>
+    </li>
+  </ul>
+</div>
+<div>
+
+  <td><%= button_to 'Delete',  @person, method: :delete, data: {confirm: "Are you sure?"} %></td>
+</div>

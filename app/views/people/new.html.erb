@@ -1,0 +1,29 @@
+<%= form_with(model: @person, local: true) do |form| %>
+
+  <h1>Registre una nueva persona: </h1>
+  <h2>Recuerde que todos los campos son obligatorios.</h2>
+  <div>
+    <strong>Nombre: </strong>
+    <%=form.text_field :name, required: true%>
+  </div>
+
+  <div>
+    <strong>Apellido: </strong>
+    <%=form.text_field :surname, required: true%>
+  </div>
+
+  <div>
+    <strong>Fecha de nacimiento: </strong>
+    <%=form.date_field :birthday, required: true%>
+  </div>
+
+  <div>
+    <strong>DNI: </strong>
+    <%=form.number_field :document, required: true%>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<%end%>
